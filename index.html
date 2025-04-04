@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Advanced Tic Tac Toe</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="game-container">
+    <h1>Tic Tac Toe</h1>
+
+    <div class="controls">
+      <button onclick="resetGame()">Restart</button>
+      <label>
+        <input type="checkbox" id="aiToggle" onchange="toggleAI()"> Play vs AI
+      </label>
+    </div>
+
+    <div class="scoreboard">
+      <p>Player X: <span id="scoreX">0</span></p>
+      <p>Player O: <span id="scoreO">0</span></p>
+      <p>Draws: <span id="draws">0</span></p>
+    </div>
+
+    <div class="board" id="board"></div>
+
+    <p id="status">Player X's turn</p>
+  </div>
+
+  <audio id="clickSound" src="sounds/click.mp3"></audio>
+  <audio id="winSound" src="sounds/win.mp3"></audio>
+  <audio id="drawSound" src="sounds/draw.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
