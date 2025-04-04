@@ -10,6 +10,8 @@
   <div class="game-container">
     <h1>Tic Tac Toe</h1>
 
+    <div id="clock" class="clock"></div> <!-- Added clock element -->
+
     <div class="controls">
       <button onclick="resetGame()">Restart</button>
       <label>
@@ -33,5 +35,15 @@
   <audio id="drawSound" src="sounds/draw.mp3"></audio>
 
   <script src="script.js"></script>
+  <script>
+    // Clock functionality
+    function updateClock() {
+      const clockElement = document.getElementById('clock');
+      const now = new Date();
+      clockElement.textContent = now.toLocaleTimeString();
+    }
+    setInterval(updateClock, 1000); // Update clock every second
+    updateClock(); // Initialize clock immediately
+  </script>
 </body>
 </html>
