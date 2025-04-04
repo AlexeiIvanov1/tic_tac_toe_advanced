@@ -127,3 +127,14 @@ function toggleAI() {
 }
 
 createBoard();
+
+document.addEventListener('mousemove', (event) => {
+  const x = event.clientX / window.innerWidth;
+  const y = event.clientY / window.innerHeight;
+
+  const red = Math.round(255 * x);
+  const green = Math.round(255 * y);
+  const blue = Math.round(255 * (1 - x));
+
+  document.body.style.background = `rgb(${red}, ${green}, ${blue})`;
+});

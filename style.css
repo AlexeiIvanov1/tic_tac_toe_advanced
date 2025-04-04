@@ -1,11 +1,20 @@
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #232526, #414345);
+  background: linear-gradient(120deg, #ff9a9e, #fad0c4);
+  background-size: 400% 400%;
   color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  margin: 0;
+  transition: background 0.2s ease;
+  overflow: hidden;
+}
+
+body.relaxing {
+  background: radial-gradient(circle, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
+  background-size: 200% 200%;
 }
 
 .game-container {
