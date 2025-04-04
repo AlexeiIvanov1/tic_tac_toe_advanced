@@ -17,6 +17,7 @@
       <label>
         <input type="checkbox" id="aiToggle" onchange="toggleAI()"> Play vs AI
       </label>
+      <button onclick="toggleMusic()">Toggle Music</button> <!-- Added music toggle button -->
     </div>
 
     <div class="scoreboard">
@@ -33,6 +34,7 @@
   <audio id="clickSound" src="sounds/click.mp3"></audio>
   <audio id="winSound" src="sounds/win.mp3"></audio>
   <audio id="drawSound" src="sounds/draw.mp3"></audio>
+  <audio id="backgroundMusic" src="sounds/background.mp3" loop></audio> <!-- Added background music -->
 
   <script src="script.js"></script>
   <script>
@@ -44,6 +46,21 @@
     }
     setInterval(updateClock, 1000); // Update clock every second
     updateClock(); // Initialize clock immediately
+
+    // Background music functionality
+    const backgroundMusic = document.getElementById('backgroundMusic');
+    let isMusicPlaying = false;
+
+    function toggleMusic() {
+      if (isMusicPlaying) {
+        backgroundMusic.pause();
+      } else {
+        backgroundMusic.play();
+      }
+      isMusicPlaying = !isMusicPlaying;
+    }
+
+    // Removed AI vs AI mode logic
   </script>
 </body>
 </html>
